@@ -34,5 +34,15 @@
 				}
 			});
 		}
-    });
+	});
+	$('#aboutClick').on('click', function(){
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 500)
+	})
+	$('#portfolioClick').on('click', function(){
+        $('html, body').animate({
+            scrollTop: $('#portfolio').offset().top
+        }, 500)
+    })
 })(jQuery);

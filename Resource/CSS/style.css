@@ -148,6 +148,31 @@ button:focus {
 .header_area .navbar .nav .nav-item:last-child {
 	margin-right: 0px;
 }
+.header_area.navbar_fixed .main_menu {
+	position: fixed;
+	width: 100%;
+	top: -70px;
+	left: 0;
+	right: 0;
+	background: #ffffff;
+	transform: translateY(70px);
+	transition: transform 500ms ease, background 500ms ease;
+	-webkit-transition: transform 500ms ease, background 500ms ease;
+	box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1); 
+}
+.header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
+	line-height: 70px; 
+}
+.header_area.white_menu.navbar_fixed .main_menu .navbar .navbar-brand img {
+	display: inline-block; 
+}
+.header_area.white_menu.navbar_fixed .main_menu .navbar .navbar-brand img + img {
+	display: none; 
+}
+.header_area.white_menu.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
+	line-height: 70px;
+	color: #000000; 
+}
 /* #endregion */
 
 /* #region  Home Banner CSS */

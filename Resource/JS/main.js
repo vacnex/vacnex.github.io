@@ -38,16 +38,28 @@
 	$('#aboutClick').on('click', function(){
         $('html, body').animate({
             scrollTop: $('#about').offset().top
-        }, 500)
+		}, 500,
+		function () { 
+			$('#fitem').removeClass('active');
+			$('#sitem').addClass('active');
+		})
 	})
 	$('#portfolioClick').on('click', function(){
         $('html, body').animate({
             scrollTop: $('#portfolio').offset().top
-        }, 500)
+        }, 500,function () { 
+			$('#fitem').removeClass('active');
+			$('#sitem').removeClass('active');
+			$('#titem').addClass('active');
+		})
 	})
 	$('#homeClick').on('click', function(){
         $('html, body').animate({
             scrollTop: 0
-        }, 1000)
+        }, 1000,function () { 
+			$('#sitem').removeClass('active');
+			$('#titem').removeClass('active');
+			$('#fitem').addClass('active');
+		})
     })
 })(jQuery);

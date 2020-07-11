@@ -68,7 +68,7 @@
 			$('#titem').removeClass('active');
 			$('#fitem').addClass('active');
 		}
-		if ($(window).scrollTop() > 0 && $(window).scrollTop() < 1866) {
+		if ($(window).scrollTop() > 800 && $(window).scrollTop() < 1866) {
 			$('#fitem').removeClass('active');
 			$('#titem').removeClass('active');
 			$('#sitem').addClass('active');

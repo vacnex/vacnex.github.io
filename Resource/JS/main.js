@@ -37,7 +37,7 @@
 	});
 	$('#aboutClick').on('click', function(){
         $('html, body').animate({
-            scrollTop: $('#about').offset().top
+            scrollTop: 971
 		}, 500,
 		function () { 
 			$('#fitem').removeClass('active');
@@ -46,7 +46,7 @@
 	})
 	$('#portfolioClick').on('click', function(){
         $('html, body').animate({
-            scrollTop: $('#portfolio').offset().top
+            scrollTop: 1866
         }, 500,function () { 
 			$('#fitem').removeClass('active');
 			$('#sitem').removeClass('active');
@@ -61,5 +61,23 @@
 			$('#titem').removeClass('active');
 			$('#fitem').addClass('active');
 		})
-    })
+	})
+	$(window).scroll(function () { 
+		if ($(window).scrollTop() == 0) {
+			$('#sitem').removeClass('active');
+			$('#titem').removeClass('active');
+			$('#fitem').addClass('active');
+		}
+		if ($(window).scrollTop() > 0 && $(window).scrollTop() < 1866) {
+			$('#fitem').removeClass('active');
+			$('#titem').removeClass('active');
+			$('#sitem').addClass('active');
+		}
+		if ($(window).scrollTop() >= 1866) {
+			$('#fitem').removeClass('active');
+			$('#sitem').removeClass('active');
+			$('#titem').addClass('active');
+		}
+	});
+	// console.log();
 })(jQuery);

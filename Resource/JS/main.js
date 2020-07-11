@@ -44,5 +44,10 @@
         $('html, body').animate({
             scrollTop: $('#portfolio').offset().top
         }, 500)
+	})
+	$('#homeClick').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000)
     })
 })(jQuery);

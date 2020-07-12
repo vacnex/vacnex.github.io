@@ -37,7 +37,7 @@
 	});
 	$('#aboutClick').on('click', function(){
         $('html, body').animate({
-            scrollTop: 971
+            scrollTop: $('#about').offset().top
 		}, 500,
 		function () { 
 			$('#fitem').removeClass('active');
@@ -46,7 +46,7 @@
 	})
 	$('#portfolioClick').on('click', function(){
         $('html, body').animate({
-            scrollTop: 1866
+			scrollTop: $('#portfolio').offset().top
         }, 500,function () { 
 			$('#fitem').removeClass('active');
 			$('#sitem').removeClass('active');

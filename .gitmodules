@@ -1,0 +1,3 @@
+[submodule "Projects/sufyld"]
+	path = Projects/sufyld
+	url = https://github.com/vacnex/SUFYLD.git

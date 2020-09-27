@@ -32,22 +32,169 @@
                                 all put. Added forth chief trees but rooms think may.</p>
                         </div>
                     </div>
-                </article>
+                </article>-->
                 <article class="timeline-entry">
                     <div class="timeline-entry-inner">
-                        <time class="timeline-time" datetime="2014-01-10T03:45">
-                            <span>Styczeń</span>
-                            <span>2019</span>
-                        </time>
+                        <div class="timeline-time">
+                            <span>C204</span>
+                            <span>23/09/2020</span>
+                        </div>
                         <div class="timeline-icon bg-primary">
-                            <i class="fas fa-suitcase"></i>
+                            <i class="fas fa-book-open"></i>
                         </div>
                         <div class="timeline-label">
-                            <h2>Lorem ipsum dolor sit amet</h2>
-                            <p>We have had a meeting at <strong>Office</strong>.</p>
+                            <div class="container">
+                                <h3 class="text-center">Basic configure</h3>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router> enable <br>
+                                        Router# configure terminal
+                                    </div>
+                                    <div class="col">
+                                        Vào chế độ cấu hình chung khi sử dụng cổng console.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# hostname Router
+                                    </div>
+                                    <div class="col">
+                                        Chỉ định tên cho router.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# enable secret cisco
+                                    </div>
+                                    <div class="col">
+                                        Chỉ định mật khẩu được mã hóa để truy cập router.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter">
+                                        Router(config)# hostname Router
+                                    </div>
+                                    <div class="col">
+                                        Chỉ định tên cho router.
+                                    </div>
+                                </div>
+                                <h3 class="text-center">Interface configure</h3>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router> enable <br>
+                                        Router# configure terminal
+                                    </div>
+                                    <div class="col">
+                                        Vào chế độ cấu hình chung khi sử dụng cổng console.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# interface fastethernet 0/1
+                                    </div>
+                                    <div class="col">
+                                        Vào chế độ cấu hình interface fast ethernet trên router.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter">
+                                        Router(config-if)# ip address 192.168.12.2 255.255.255.0
+                                    </div>
+                                    <div class="col">
+                                        Đặt địa chỉ IP và subnetmask con cho interface được chỉ định.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter">
+                                        Router(config-if)# no shutdown
+                                    </div>
+                                    <div class="col">
+                                        Bật interface fast ethernet.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter">
+                                        Router(config-if)# exit
+                                    </div>
+                                    <div class="col">
+                                        Thoát chế độ cấu hình cho interface và quay lại chế độ cấu hình chung.
+                                    </div>
+                                </div>
+                                <h3 class="text-center">Line configure</h3>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router> enable <br>
+                                        Router# configure terminal
+                                    </div>
+                                    <div class="col">
+                                        Vào chế độ cấu hình chung.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# line vty 0
+                                    </div>
+                                    <div class="col">
+                                        Vào chế độ cấu hình line và chỉ định loại line <br>[ aux | console | tty | vty ].
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# password cisco
+                                    </div>
+                                    <div class="col">
+                                        Chỉ định mật khẩu cho line.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter">
+                                        Router(config-line)# login
+                                    </div>
+                                    <div class="col">
+                                        Cho phép xác minh mật khẩu ở phiên đăng nhập đầu cuối.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter">
+                                        Router(config-line)# end
+                                    </div>
+                                    <div class="col">
+                                        Thoát chế độ cấu hình line.
+                                    </div>
+                                </div>
+                                <h3 class="text-center">Static routes configure</h3>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# ip route 192.168.1.0 255.255.0.0 10.10.10.2
+                                    </div>
+                                    <div class="col">
+                                        Chỉ định ip tĩnh cho route.
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col rounded ter" >
+                                        Router(config)# end
+                                    </div>
+                                    <div class="col">
+                                        Thoát chế độ cấu hình route.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </article> -->
+                </article> 
                 <article class="timeline-entry ">
                     <div class="timeline-entry-inner">
                         <div class="timeline-time">

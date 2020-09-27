@@ -3,6 +3,13 @@ body {
     
 }
 
+.ter{
+	font-size: 11pt;
+	font-family: Inconsolata, monospace;
+	color: white;
+	background-color: black;
+}
+
 .timeline-label { 
     transition: all .3s ease-in-out; 
 }

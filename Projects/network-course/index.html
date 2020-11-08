@@ -2,305 +2,475 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Network Course</title>
-    <link rel="stylesheet" href="../../Resource/CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Resource/CSS/fontawesome.min.5.13.1.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="../../Resource/CSS/fontawesome.min.5.13.1.css" />
+    <link rel="stylesheet" href="../../Resource/CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="timeline-centered p-r-l-15">
-            <!-- <article class="timeline-entry">
-                    <div class="timeline-entry-inner">
-                        <time class="timeline-time" datetime="2014-01-10T03:45">
-                            <span>Styczeń</span>
-                            <span>2019</span>
-                        </time>
-                        <div class="timeline-icon bg-primary">
-                            <i class="fas fa-suitcase"></i>
-                        </div>
-                        <div class="timeline-label">
-                            <h2>Oddanie wersji produkcyjnej <strong>xxx</strong>. Kontynuacja rozwoju. </h2>
-                            <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered
-                                prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare
-                                all put. Added forth chief trees but rooms think may.</p>
-                        </div>
+            <article class="timeline-entry">
+                <div class="timeline-entry-inner">
+                    <div class="timeline-time">
+                        <span>Finish</span>
+                        <span>All Time</span>
                     </div>
-                </article>-->
-                <article class="timeline-entry">
-                    <div class="timeline-entry-inner">
-                        <div class="timeline-time">
-                            <span>C204</span>
-                            <span>23/09/2020</span>
-                        </div>
-                        <div class="timeline-icon bg-primary">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <div class="timeline-label">
-                            <div class="container">
-                                <h3 class="text-center">Basic configure</h3>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router> enable <br>
-                                        Router# configure terminal
-                                    </div>
-                                    <div class="col">
-                                        Vào chế độ cấu hình chung khi sử dụng cổng console.
+                    <div class="timeline-icon bg-primary">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-label">
+                        <div class="accordion" id="accordionFinish">
+                            <div class="card">
+                                <div class="card-header" id="heading1">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                            Protocols And Models
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionFinish">
+                                    <div class="card-body">
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Segmentation</h2>
+                                                <blockquote class="card-text">
+                                                Segmentation is the process of dividing a stream of data into smaller units for transmissions over the network. Segmentation is necessary because data networks use the TCP/IP protocol suite send data in individual IP packets. Each packet is sent separately, similar to sending a long letter as a series of individual postcards. Packets containing segments for the same destination can be sent over different paths.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Sequencing</h2>
+                                                <blockquote class="card-text">
+                                                Imagine if you had to send a 100-page letter, but each envelope could only hold one page. Therefore, 100 envelopes would be required and each envelope would need to be addressed individually. It is possible that the 100-page letter in 100 different envelopes arrives out-of-order. Consequently, the information in the envelope would need to include a sequence number to ensure that the receiver could reassemble the pages in the proper order.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Multiplexing</h2>
+                                                <blockquote class="card-text">
+                                                Because a large data stream is segmented into packets, large amounts of data can be sent over the network without tying up a communications link. This allows many different conversations to be interleaved on the network called multiplexing.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Protocol Data Units (Data, segment, packet, frame)</h2>
+                                                <blockquote class="card-text">
+                                                The form that a piece of data takes at any layer is called a protocol data unit (PDU). During encapsulation, each succeeding layer encapsulates the PDU that it receives from the layer above in accordance with the protocol being used. At each stage of the process, a PDU has a different name to reflect its new functions. Although there is no universal naming convention for PDUs, in this course, the PDUs are named according to the protocols of the TCP/IP suite. The PDUs for each form of data are shown in the figure.
+                                                </blockquote>
+                                                <img src="./assets/DPU.png" alt="" srcset="">
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Data Encapsulation</h2>
+                                                <blockquote class="card-text">
+                                                When messages are being sent on a network, the encapsulation process works from top to bottom. At each layer, the upper layer information is considered data within the encapsulated protocol.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">De-encapsulation</h2>
+                                                <blockquote class="card-text">
+                                                This process is reversed at the receiving host and is known as de-encapsulation. <br/>De-encapsulation is the process used by a receiving device to remove one or more of the protocol headers. The data is de-encapsulated as it moves up the stack toward the end-user application.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Network Layer Source & Destination Addresses & Data Link Layer Source & Destination Addresses In The Same Network, Remote Network</h2>
+                                                <blockquote class="card-text">
+                                                Network layer source and destination addresses - Responsible for delivering the IP packet from the original source to the final destination, which may be on the same network or a remote network.<br />
+                                                Data link layer source and destination addresses - Responsible for delivering the data link frame from one network interface card (NIC) to another NIC on the same network.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Data Link Layer Source & Destination Addresses</h2>
+                                                <blockquote class="card-text">
+                                                The data link Layer 2 physical address has a different role. The purpose of the data link address is to deliver the data link frame from one network interface to another network interface on the same network.<br />
+                                                Destination data link address - The physical address of the NIC that is receiving the data link frame. This address is either the next hop router or the address of the final destination device.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Communication (Broadcast, multicast, unicast, anycast)</h2>
+                                                <blockquote class="card-text">
+                                                </blockquote>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# hostname Router
-                                    </div>
-                                    <div class="col">
-                                        Chỉ định tên cho router.
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="heading2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            Physical Layer
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionFinish">
+                                    <div class="card-body">
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Encoding/ Decoding</h2>
+                                                <blockquote class="card-text">
+                                                    Encoding or line encoding is a method of converting a stream of data bits into a predefined "code”. Codes are groupings of bits used to provide a predictable pattern that can be recognized by both the sender and the receiver. In other words, encoding is the method or pattern used to represent digital information. This is similar to how Morse code encodes a message using a series of dots and dashes.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Latency</h2>
+                                                <blockquote class="card-text">
+                                                    Latency refers to the amount of time, including delays, for data to travel from one given point to another.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Throughput</h2>
+                                                <blockquote class="card-text">
+                                                    Throughput is the measure of the transfer of bits across the media over a given period of time.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Goodput</h2>
+                                                <blockquote class="card-text">
+                                                    Goodput is the measure of usable data transferred over a given period of time. Goodput is throughput minus traffic overhead for establishing sessions.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Bandwidth</h2>
+                                                <blockquote class="card-text">
+                                                    Bandwidth is the capacity at which a medium can carry data. Digital bandwidth measures the amount of data that can flow from one place to another in a given amount of time.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Copper Cabling (Unshielded twisted-pair (UTP), Shielded twisted-pair (STP))</h2>
+                                                <blockquote class="card-text">
+                                                    Unshielded twisted-pair (UTP) cabling is the most common networking media. UTP cabling, terminated with RJ-45 connectors, is used for interconnecting network hosts with intermediary networking devices, such as switches and routers.
+                                                    <br/>
+                                                    Shielded twisted-pair (STP) provides better noise protection than UTP cabling. However, compared to UTP cable, STP cable is significantly more expensive and difficult to install. Like UTP cable, STP uses an RJ-45 connector.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Coaxial cable</h2>
+                                                <blockquote class="card-text">
+                                                    Coaxial cable, or coax for short, gets its name from the fact that there are two conductors that share the same axis.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Fiber-Optic Cabling</h2>
+                                                <blockquote class="card-text">
+                                                    Fiber-optic cabling is the other type of cabling used in networks. Because it is expensive, it is not as commonly used at the various types of copper cabling.
+                                                    <br />
+                                                    Optical fiber cable transmits data over longer distances and at higher bandwidths than any other networking media. Unlike copper wires, fiber-optic cable can transmit signals with less attenuation and is completely immune to EMI and RFI. Optical fiber is commonly used to interconnect network devices.
+                                                    <br />
+                                                    Optical fiber is a flexible, but extremely thin, transparent strand of very pure glass, not much bigger than a human hair. Bits are encoded on the fiber as light impulses.
+                                                </blockquote>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# enable secret cisco
-                                    </div>
-                                    <div class="col">
-                                        Chỉ định mật khẩu được mã hóa để truy cập router.
-                                    </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="heading3">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Number Systems
+                                    </button>
+                                    </h2>
                                 </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter">
-                                        Router(config)# hostname Router
-                                    </div>
-                                    <div class="col">
-                                        Chỉ định tên cho router.
-                                    </div>
-                                </div>
-                                <h3 class="text-center">Interface configure</h3>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router> enable <br>
-                                        Router# configure terminal
-                                    </div>
-                                    <div class="col">
-                                        Vào chế độ cấu hình chung khi sử dụng cổng console.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# interface fastethernet 0/1
-                                    </div>
-                                    <div class="col">
-                                        Vào chế độ cấu hình interface fast ethernet trên router.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter">
-                                        Router(config-if)# ip address 192.168.12.2 255.255.255.0
-                                    </div>
-                                    <div class="col">
-                                        Đặt địa chỉ IP và subnetmask con cho interface được chỉ định.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter">
-                                        Router(config-if)# no shutdown
-                                    </div>
-                                    <div class="col">
-                                        Bật interface fast ethernet.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter">
-                                        Router(config-if)# exit
-                                    </div>
-                                    <div class="col">
-                                        Thoát chế độ cấu hình cho interface và quay lại chế độ cấu hình chung.
-                                    </div>
-                                </div>
-                                <h3 class="text-center">Line configure</h3>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router> enable <br>
-                                        Router# configure terminal
-                                    </div>
-                                    <div class="col">
-                                        Vào chế độ cấu hình chung.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# line vty 0
-                                    </div>
-                                    <div class="col">
-                                        Vào chế độ cấu hình line và chỉ định loại line <br>[ aux | console | tty | vty ].
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# password cisco
-                                    </div>
-                                    <div class="col">
-                                        Chỉ định mật khẩu cho line.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter">
-                                        Router(config-line)# login
-                                    </div>
-                                    <div class="col">
-                                        Cho phép xác minh mật khẩu ở phiên đăng nhập đầu cuối.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter">
-                                        Router(config-line)# end
-                                    </div>
-                                    <div class="col">
-                                        Thoát chế độ cấu hình line.
-                                    </div>
-                                </div>
-                                <h3 class="text-center">Static routes configure</h3>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# ip route 192.168.1.0 255.255.0.0 10.10.10.2
-                                    </div>
-                                    <div class="col">
-                                        Chỉ định ip tĩnh cho route.
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col rounded ter" >
-                                        Router(config)# end
-                                    </div>
-                                    <div class="col">
-                                        Thoát chế độ cấu hình route.
+                                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionFinish">
+                                    <div class="card-body">
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Binary Number System</h2>
+                                                <blockquote class="card-text">
+                                                Binary is a numbering system that consists of the digits 0 and 1 called bits.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Convert Binary to Decimal</h2>
+                                                <blockquote class="card-text">
+                                                    To convert a binary IPv4 address to its dotted decimal equivalent, divide the IPv4 address into four 8-bit octets. Next apply the binary positional value to the first octet binary number and calculate accordingly.
+                                                </blockquote>
+                                                <img src="./assets/bi2de.png" alt="" srcset="">
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Decimal to Binary Conversion</h2>
+                                                <img src="./assets/1.png" alt="">
+                                                <img src="./assets/2.png" alt="">
+                                                <img src="./assets/3.png" alt="">
+                                                <img src="./assets/4.png" alt="">
+                                                <img src="./assets/5.png" alt="">
+                                                <img src="./assets/6.png" alt="">
+                                                <img src="./assets/7.png" alt="">
+                                                <img src="./assets/8.png" alt="">
+                                                <img src="./assets/9.png" alt="">
+                                                <img src="./assets/10.png" alt="">
+                                                <img src="./assets/11.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Hexadecimal Number System</h2>
+                                                <blockquote class="card-text">
+                                                    Goodput is the measure of usable data transferred over a given period of time. Goodput is throughput minus traffic overhead for establishing sessions.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Decimal to Hexadecimal Conversions</h2>
+                                                <blockquote class="card-text">
+                                                    Hexadecimal is a base sixteen system. The base sixteen number system uses the digits 0 to 9 and the letters A to F.
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="card m-3">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Hexadecimal to Decimal Conversion</h2>
+                                                <blockquote class="card-text">
+                                                    Converting hexadecimal numbers to decimal values is also straightforward. Follow the steps listed: <br />
+                                                    1. Convert the hexadecimal number to 4-bit binary strings.<br />
+                                                    2. Create 8-bit binary grouping starting from the rightmost position.<br />
+                                                    3. Convert each 8-bit binary grouping into their equivalent decimal digit.
+                                                </blockquote>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </article> 
-                <article class="timeline-entry ">
-                    <div class="timeline-entry-inner">
-                        <div class="timeline-time">
-                            <span>C204</span>
-                            <span>16/09/2020</span>
-                        </div>
-                        <div class="timeline-icon bg-primary">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <div class="timeline-label">
-                            <div class="accordion" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h3 class="mb-0 btn btn-link btn-block " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Thành phần cần có để thiết lập một mô hình mạng nhỏ</h3>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Máy chủ (server).
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Router.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Router WIFI.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Switch trung tâm.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Switch phòng máy.
-                                            </small>
-                                        </footer>
-                                    </div>
+                </div>
+            </article>
+            <article class="timeline-entry">
+                <div class="timeline-entry-inner">
+                    <div class="timeline-time">
+                        <span>C204</span>
+                        <span>23/09/2020</span>
+                    </div>
+                    <div class="timeline-icon bg-primary">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-label">
+                        <div class="container">
+                            <h3 class="text-center">Basic configure</h3>
+                            <div class="row">
+                                <div class="col rounded ter">
+                                    Router> enable <br />
+                                    Router# configure terminal
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h3 class="mb-0 btn btn-link btn-block  collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                        aria-expanded="false" aria-controls="collapseTwo">Chức năng của các thiết bị</h3>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Máy chủ (server) là nơi chứa dữ liệu, cũng có thể dùng để làm DHCP server .
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Cho phép hệ thống mạng kết nối internet bằng cáp quang.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Router WIFI dùng cho các thiết bị không dây.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Switch trung tâm kết nối toàn bộ hệ thống với nhau mà đặc biệt là kết nối các máy tính với máy chủ (để có thể quản lý) và router (để có thể truy cập internet).
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Switch phòng máy kết nối các máy tính con trong một phòng.
-                                            </small>
-                                        </footer>
-                                    </div>
+                                <div class="col">Vào chế độ cấu hình chung khi sử dụng cổng console.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# hostname Router</div>
+                                <div class="col">Chỉ định tên cho router.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# enable secret cisco</div>
+                                <div class="col">Chỉ định mật khẩu được mã hóa để truy cập router.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# hostname Router</div>
+                                <div class="col">Chỉ định tên cho router.</div>
+                            </div>
+                            <h3 class="text-center">Interface configure</h3>
+                            <div class="row">
+                                <div class="col rounded ter">
+                                    Router> enable <br />
+                                    Router# configure terminal
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h3 class="mb-0 btn btn-link btn-block  collapsed"
-                                        type="button" data-toggle="collapse"
-                                        data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">Một số dòng thiết bị và giá </h3>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                        data-parent="#accordionExample">
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Router của VNPT hoặc Viettel,.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Switch chia mạng của Cisco,Linksys giá tuỳ vào cấu hình.
-                                            </small>
-                                        </footer>
-                                        <footer class="blockquote-footer">
-                                            <small class="text-muted">
-                                                Router WIFI của Linksys giá tuỳ vào cấu hình.
-                                            </small>
-                                        </footer>
-                                    </div>
+                                <div class="col">Vào chế độ cấu hình chung khi sử dụng cổng console.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# interface fastethernet 0/1</div>
+                                <div class="col">Vào chế độ cấu hình interface fast ethernet trên router.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config-if)# ip address 192.168.12.2 255.255.255.0
+                                </div>
+                                <div class="col">Đặt địa chỉ IP và subnetmask con cho interface được chỉ định.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config-if)# no shutdown</div>
+                                <div class="col">Bật interface fast ethernet.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config-if)# exit</div>
+                                <div class="col">Thoát chế độ cấu hình cho interface và quay lại chế độ cấu hình chung.
+                                </div>
+                            </div>
+                            <h3 class="text-center">Line configure</h3>
+                            <div class="row">
+                                <div class="col rounded ter">
+                                    Router> enable <br />
+                                    Router# configure terminal
+                                </div>
+                                <div class="col">Vào chế độ cấu hình chung.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# line vty 0</div>
+                                <div class="col">Vào chế độ cấu hình line và chỉ định loại line <br />[ aux | console |
+                                    tty | vty ].</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# password cisco</div>
+                                <div class="col">Chỉ định mật khẩu cho line.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config-line)# login</div>
+                                <div class="col">Cho phép xác minh mật khẩu ở phiên đăng nhập đầu cuối.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config-line)# end</div>
+                                <div class="col">Thoát chế độ cấu hình line.</div>
+                            </div>
+                            <h3 class="text-center">Static routes configure</h3>
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# ip route 192.168.1.0 255.255.0.0 10.10.10.2
+                                </div>
+                                <div class="col">Chỉ định ip tĩnh cho route.</div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col rounded ter">Router(config)# end</div>
+                                <div class="col">Thoát chế độ cấu hình route.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="timeline-entry">
+                <div class="timeline-entry-inner">
+                    <div class="timeline-time">
+                        <span>C204</span>
+                        <span>16/09/2020</span>
+                    </div>
+                    <div class="timeline-icon bg-primary">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-label">
+                        <div class="accordion" id="accordionC204">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h3 class="mb-0 btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Thành phần cần có để thiết lập một mô hình mạng nhỏ
+                                    </h3>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionC204">
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Máy chủ (server). </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Router. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Router WIFI. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Switch trung tâm. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Switch phòng máy. </small>
+                                    </footer>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h3 class="mb-0 btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Chức năng của các thiết bị
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionC204">
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Máy chủ (server) là nơi chứa dữ liệu, cũng có thể
+                                            dùng để làm DHCP server . </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Cho phép hệ thống mạng kết nối internet bằng cáp
+                                            quang. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Router WIFI dùng cho các thiết bị không dây. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted">
+                                            Switch trung tâm kết nối toàn bộ hệ thống với nhau mà đặc biệt là kết nối
+                                            các máy tính với máy chủ (để có thể quản lý) và
+                                            router (để có thể truy cập internet).
+                                        </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Switch phòng máy kết nối các máy tính con trong một
+                                            phòng. </small>
+                                    </footer>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h3 class="mb-0 btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Một số dòng thiết bị và giá
+                                    </h3>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionC204">
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Router của VNPT hoặc Viettel,. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Switch chia mạng của Cisco,Linksys giá tuỳ vào cấu
+                                            hình. </small>
+                                    </footer>
+                                    <footer class="blockquote-footer">
+                                        <small class="text-muted"> Router WIFI của Linksys giá tuỳ vào cấu hình.
+                                        </small>
+                                    </footer>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </article> 
+                </div>
+            </article>
             <article class="timeline-entry">
                 <div class="timeline-entry-inner">
                     <div class="timeline-time">
@@ -310,13 +480,14 @@
                     <div class="timeline-icon bg-primary">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <div class="timeline-label" >
+                    <div class="timeline-label">
                         <div class="card-columns">
                             <div class="card">
                                 <div class="card-body">
                                     <h2 class="card-title">LANs</h2>
-                                    <blockquote class="card-text">Mạng LAN cung cấp băng thông tốc độ cao cho các thiết
-                                        bị đầu cuối kết nối với nhau và hoạt động trong một diện tích nhất định.
+                                    <blockquote class="card-text">
+                                        Mạng LAN cung cấp băng thông tốc độ cao cho các thiết bị đầu cuối kết nối với
+                                        nhau và hoạt động trong một diện tích nhất định.
                                     </blockquote>
                                 </div>
                             </div>
@@ -324,27 +495,26 @@
                                 <blockquote class="blockquote mb-0 card-body">
                                     <h2 class="card-title">Internet, Extranet, Intranet</h2>
                                     <footer class="blockquote-footer">
-                                        <small class="text-muted">
-                                            Internet là hệ thống liên kết nhiều mạng với nhau trên toàn cầu.
-                                        </small>
+                                        <small class="text-muted"> Internet là hệ thống liên kết nhiều mạng với nhau
+                                            trên toàn cầu. </small>
                                     </footer>
                                     <footer class="blockquote-footer">
-                                        <small class="text-muted">
-                                            Extranet cho phép những người bên ngoài có thể truy cập hạn chế vào hệ thống.
-                                        </small>
+                                        <small class="text-muted"> Extranet cho phép những người bên ngoài có thể truy
+                                            cập hạn chế vào hệ thống. </small>
                                     </footer>
                                     <footer class="blockquote-footer">
-                                        <small class="text-muted">
-                                            Intranet là mạng máy tính cục bộ. Mọi hoạt động được đều phải có thông tin xác thực.
-                                        </small>
+                                        <small class="text-muted"> Intranet là mạng máy tính cục bộ. Mọi hoạt động được
+                                            đều phải có thông tin xác thực. </small>
                                     </footer>
                                 </blockquote>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h2 class="card-title">WANs</h2>
-                                    <blockquote class="card-text">Mạng WAN cung cấp băng thông tốc độ chậm giữa các mạng
-                                        LAN kết nối trên một khu vực địa lý rộng.</blockquote>
+                                    <blockquote class="card-text">
+                                        Mạng WAN cung cấp băng thông tốc độ chậm giữa các mạng LAN kết nối trên một khu
+                                        vực địa lý rộng.
+                                    </blockquote>
                                 </div>
                             </div>
                             <div class="card bg-primary text-white text-center p-3">
@@ -353,51 +523,51 @@
                                     <footer class="blockquote-footer text-white">
                                         <small>
                                             Hosts có thể là thiết bị đầu cuối hoặc có thể là máy khách. Tất cả các máy
-                                            tính được kết nối với mạng và tham gia trực tiếp vào giao tiếp mạng được
-                                            phân loại là hosts. Các thiết bị trên mạng được gán một IP xác định máy chủ
-                                            và mạng mà máy chủ cho mục đích giao tiếp.</small>
+                                            tính được kết nối với mạng và tham gia trực tiếp
+                                        </small>
                                     </footer>
                                 </blockquote>
                             </div>
                             <div class="card text-center p-3">
                                 <div class="card-body">
                                     <h2 class="card-title">Network Media</h2>
-                                    <blockquote class="card-text">Có thể hiểu là phương tiện truyền tải dữ liệu, hiện nay có 3 loại phương tiện để kết nối.</blockquote>
+                                    <blockquote class="card-text">
+                                        Có thể hiểu là phương tiện truyền tải dữ liệu, hiện nay có 3 loại phương tiện để
+                                        kết nối.
+                                    </blockquote>
                                     <div class="accordion" id="accordionCable">
                                         <div class="card">
                                             <div class="card-header" id="headingCopper">
-                                                <p class="mb-0 btn btn-link btn-block " type="button" data-toggle="collapse" data-target="#collapseCopper" aria-expanded="true" aria-controls="collapseCopper">Copper</p>
-                                            </div>
-                                            <div id="collapseCopper" class="collapse" aria-labelledby="headingCopper"
-                                                data-parent="#accordionCable">
-                                                <p class="card-body">
-                                                    Truyền tải thông qua các cáp có lõi đồng (cáp LAN), dữ liệu được mã hóa thành các xung điện.
+                                                <p class="mb-0 btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseCopper" aria-expanded="true" aria-controls="collapseCopper">
+                                                    Copper
                                                 </p>
+                                            </div>
+                                            <div id="collapseCopper" class="collapse" aria-labelledby="headingCopper" data-parent="#accordionCable">
+                                                <p class="card-body">Truyền tải thông qua các cáp có lõi đồng (cáp LAN),
+                                                    dữ liệu được mã hóa thành các xung điện.</p>
                                             </div>
                                         </div>
                                         <div class="card">
                                             <div class="card-header" id="headingFiber">
-                                                <p class="mb-0 btn btn-link btn-block  collapsed" type="button" data-toggle="collapse" data-target="#collapseFiber"
-                                                aria-expanded="false" aria-controls="collapseFiber">Fiber-optic</p>
+                                                <p class="mb-0 btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseFiber" aria-expanded="false" aria-controls="collapseFiber">
+                                                    Fiber-optic
+                                                </p>
                                             </div>
                                             <div id="collapseFiber" class="collapse" aria-labelledby="headingFiber" data-parent="#accordionCable">
                                                 <p class="card-body">
-                                                    Truyền tải thông qua các cáp có lõi thuỷ tinh (cáp quang), dữ liệu được mã hóa thành các xung ánh sáng.
+                                                    Truyền tải thông qua các cáp có lõi thuỷ tinh (cáp quang), dữ liệu
+                                                    được mã hóa thành các xung ánh sáng.
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="card">
                                             <div class="card-header" id="headingWireless">
-                                                <p class="mb-0 btn btn-link btn-block  collapsed"
-                                                type="button" data-toggle="collapse"
-                                                data-target="#collapseWireless" aria-expanded="false"
-                                                aria-controls="collapseWireless">Wireless</p>
-                                            </div>
-                                            <div id="collapseWireless" class="collapse" aria-labelledby="headingWireless"
-                                                data-parent="#accordionCable">
-                                                <p class="card-body">
-                                                    Truyền tải không dây và dữ liệu được mã hóa thông qua sóng điện từ.
+                                                <p class="mb-0 btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseWireless" aria-expanded="false" aria-controls="collapseWireless">
+                                                    Wireless
                                                 </p>
+                                            </div>
+                                            <div id="collapseWireless" class="collapse" aria-labelledby="headingWireless" data-parent="#accordionCable">
+                                                <p class="card-body">Truyền tải không dây và dữ liệu được mã hóa thông qua sóng điện từ.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -406,24 +576,34 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h2 class="card-title">Intermediary Device</h2>
-                                    <blockquote class="card-text">Gọi là thiết bị trung gian, kết nối các thiết bị đầu cuối, kết nối các máy chủ riêng lẻ, để tạo thành một mạng hoàn chỉnh.</blockquote>
+                                    <blockquote class="card-text">
+                                        Gọi là thiết bị trung gian, kết nối các thiết bị đầu cuối, kết nối các máy chủ
+                                        riêng lẻ, để tạo thành một mạng hoàn chỉnh.
+                                    </blockquote>
                                 </div>
                             </div>
                             <div class="card p-3 text-right">
                                 <div class="card-body">
                                     <h2 class="card-title">Peer-to-Peer (P2P)</h2>
-                                    <blockquote class="card-text">P2P còn được gọi mà mạng ngang hàng, khi đó mỗi máy tính đóng vai trò vừa là một máy khách (client) vừa là máy chủ (server).
+                                    <blockquote class="card-text">
+                                        P2P còn được gọi mà mạng ngang hàng, khi đó mỗi máy tính đóng vai trò vừa là một
+                                        máy khách (client) vừa là máy chủ (server).
                                     </blockquote>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h2 class="card-title">End Devices</h2>
-                                    <blockquote class="card-text">Gọi là thiết bị đầu cuối, là nơi xuất phát và đích đến cuối cùng của dữ liệu trong mạng máy tính, mỗi thiết bị đầu cuối có địa chỉ IP khác nhau.</blockquote>
+                                    <blockquote class="card-text">
+                                        Gọi là thiết bị đầu cuối, là nơi xuất phát và đích đến cuối cùng của dữ liệu
+                                        trong mạng máy tính, mỗi thiết bị đầu cuối có địa
+                                        chỉ IP khác nhau.
+                                    </blockquote>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </article>
             <article class="timeline-entry">
                 <div class="timeline-entry-inner">
@@ -438,34 +618,58 @@
                         <div class="card bg-primary text-white m-2">
                             <div class="card-body">
                                 <h5 class="card-title">Mô hình OSI là gì?</h5>
-                                <blockquote class="card-text">Mô hình OSI là mô hình cung cấp một tiêu chuẩn cho các hệ thống máy tính khác nhau có thể giao tiếp với nhau. Mô hình OSI có thể được xem như một ngôn ngữ chung cho mạng máy tính. Nó dựa trên khái niệm chia hệ thống liên lạc thành bảy lớp trừu tượng, mỗi lớp xếp chồng lên lớp cuối cùng. Mỗi lớp của mô hìnhOSI xử lý một công việc cụ thể và giao tiếp với các lớp trên và dưới chính nó.
-                                    <br>
-                                    <img src="assets/osi.png" alt="" srcset="" style="width:100%">
+                                <blockquote class="card-text">
+                                    Mô hình OSI là mô hình cung cấp một tiêu chuẩn cho các hệ thống máy tính khác nhau
+                                    có thể giao tiếp với nhau. Mô hình OSI có thể
+                                    được xem như một ngôn ngữ chung cho mạng máy tính. Nó dựa trên khái niệm chia hệ
+                                    thống liên lạc thành bảy lớp trừu tượng, mỗi lớp
+                                    xếp chồng lên lớp cuối cùng. Mỗi lớp của mô hìnhOSI xử lý một công việc cụ thể và
+                                    giao tiếp với các lớp trên và dưới chính nó.
+                                    <br />
+                                    <img src="assets/osi.png" alt="" srcset="" style="width: 100%" />
                                 </blockquote>
                             </div>
                         </div>
                         <div class="card bg-primary text-white m-2">
                             <div class="card-body">
                                 <h5 class="card-title">IPv4 là gì?</h5>
-                                <blockquote class="card-text">IPv4 là Giao thức Internet phiên bản 4. Có độ dài 32 bit, là công nghệ cơ bản giúp kết nối thiết bị với web. Bất cứ khi nào một thiết bị truy cập Internet, nó sẽ được gán một địa chỉ IP số, duy nhất. Để gửi dữ liệu từ máy tính này sang máy tính khác thông qua web, một gói dữ liệu phải được chuyển qua mạng chứa địa chỉ IP của cả hai thiết bị.<br> <span style="font-weight: bold">Định dạng địa chỉ IPv4</span>
-                                    <br>– Địa chỉ của mạng (Network ID)
-                                    <br>Phần này chỉ định số duy nhất được gán cho mạng. Nó cũng xác định lớp mạng được gán.
-                                    <br>– Địa chỉ của máy (Host ID)
-                                    <br>Đây là một phần của địa chỉ IP gán cho mỗi máy chủ. Nó xác định duy nhất máy này trên mạng .Đối với mỗi máy chủ lưu trữ trên mạng phần mạng của địa chỉ sẽ giống nhau, nhưng phần máy chủ lưu trữ khác nhau.<br>
-                                    <img src="assets/ip-v4.jpg" alt="" srcset="" style="width: 100%">
+                                <blockquote class="card-text">
+                                    IPv4 là Giao thức Internet phiên bản 4. Có độ dài 32 bit, là công nghệ cơ bản giúp
+                                    kết nối thiết bị với web. Bất cứ khi nào một
+                                    thiết bị truy cập Internet, nó sẽ được gán một địa chỉ IP số, duy nhất. Để gửi dữ
+                                    liệu từ máy tính này sang máy tính khác thông
+                                    qua web, một gói dữ liệu phải được chuyển qua mạng chứa địa chỉ IP của cả hai thiết
+                                    bị.<br />
+                                    <span style="font-weight: bold">Định dạng địa chỉ IPv4</span>
+                                    <br />– Địa chỉ của mạng (Network ID) <br />Phần này chỉ định số duy nhất được gán
+                                    cho mạng. Nó cũng xác định lớp mạng được gán.
+                                    <br />– Địa chỉ của máy (Host ID) <br />Đây là một phần của địa chỉ IP gán cho mỗi
+                                    máy chủ. Nó xác định duy nhất máy này trên mạng
+                                    .Đối với mỗi máy chủ lưu trữ trên mạng phần mạng của địa chỉ sẽ giống nhau, nhưng
+                                    phần máy chủ lưu trữ khác nhau.<br />
+                                    <img src="assets/ip-v4.jpg" alt="" srcset="" style="width: 100%" />
                                 </blockquote>
                             </div>
                         </div>
                         <div class="card bg-primary text-white m-2">
                             <div class="card-body">
                                 <h5 class="card-title">IPv6 là gì?</h5>
-                                <blockquote class="card-text">IPv6 là tiêu chuẩn Giao thức Internet thế hệ tiếp theo có độ dài 128 bit nhằm bổ sung và cuối cùng thay thế IPv4. Bất kỳ thiết bị nào khác được kết nối với Internet đều cần một địa chỉ IP số để giao tiếp giữa các thiết bị khác. IPv4 đang cạn kiệt địa chỉ do việc sử dụng nó phổ biến. <br> 
+                                <blockquote class="card-text">
+                                    IPv6 là tiêu chuẩn Giao thức Internet thế hệ tiếp theo có độ dài 128 bit nhằm bổ
+                                    sung và cuối cùng thay thế IPv4. Bất kỳ thiết bị
+                                    nào khác được kết nối với Internet đều cần một địa chỉ IP số để giao tiếp giữa các
+                                    thiết bị khác. IPv4 đang cạn kiệt địa chỉ do
+                                    việc sử dụng nó phổ biến. <br />
                                     Một địa chỉ IPv6 được chia thành 3 phần: site prefix, subnet ID, interface ID.
-                                    <br>– Site prefix: là số được gán đến website bằng một ISP. Theo đó, tất cả máy tính trong cùng một vị trí sẽ được chia sẻ cùng một site prefix. 
-                                    <br>– Subnet ID: là thành phần ở bên trong trang web, được sử dụng với chức năng miêu tả cấu trúc trang của mạng. Có cấu trúc tương đương với một nhánh mạng đơn như subnet của IPv4.
-                                    <br>– Interface ID: Số này nhận dạng duy nhất một host riêng trong mạng. Được cấu hình tự động điển hình dựa vào địa chỉ MAC.<br>
-                                    <img src="assets/ipv6.png" alt="" srcset="">
-                                </blockquote>         
+                                    <br />– Site prefix: là số được gán đến website bằng một ISP. Theo đó, tất cả máy
+                                    tính trong cùng một vị trí sẽ được chia sẻ cùng
+                                    một site prefix. <br />– Subnet ID: là thành phần ở bên trong trang web, được sử
+                                    dụng với chức năng miêu tả cấu trúc trang của
+                                    mạng. Có cấu trúc tương đương với một nhánh mạng đơn như subnet của IPv4. <br />–
+                                    Interface ID: Số này nhận dạng duy nhất một host
+                                    riêng trong mạng. Được cấu hình tự động điển hình dựa vào địa chỉ MAC.<br />
+                                    <img src="assets/ipv6.png" alt="" srcset="" />
+                                </blockquote>
                             </div>
                         </div>
                     </div>
@@ -479,7 +683,6 @@
                 </div>
             </article>
         </div>
-
     </div>
     <!--container-->
     <script src="../../Resource/JS/jquery.min.js"></script>

@@ -18,6 +18,71 @@
             <article class="timeline-entry">
                 <div class="timeline-entry-inner">
                     <div class="timeline-time">
+                        <span>BONUS</span>
+                    </div>
+                    <div class="timeline-icon bg-primary">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-label">
+                        <h1 class="text-center">IPv4 / IPv6</h1>
+                        <h5 class="text-center">IP mẫu: 203.162.4.0</h5>
+                        <h5 class="text-center">Netmask: 255.255.255.0 = /24</h5>
+                        <div class="sd">
+                            <h3 class="">Chia thành 5 Subnet</h3>
+                            <p>Ta có dãy số 128 64 32 16 8 4 2 1</p>
+                            <p>Đầu tiên cần chuyển ip về dạng nhị phần bằng cách lấy octet đầu tiên trừ 128 </p>
+                            <p>Nếu không trừ được thì ta điền số 0 đầu tiên, ở đây trừ được còn 75 và t điền 1.  </p>
+                            <p>Tiếp tục lấy 75 trừ tiếp 64 được còn 11 và ta điền 1. </p>
+                            <p>Thấy rằng 11 không trừ được từ 32 đến 16 nên ta điền 2 số 0. </p>
+                            <p>Tiếp tục lấy 11 trừ tiếp 8 được còn 3 và ta điền 1. </p>
+                            <p>Thấy rằng 3 không trừ được từ 4 nên ta điền số 0. </p>
+                            <p>Tiếp tục lấy 3 trừ tiếp 2 được còn 1 và ta điền 1. </p>
+                            <p>Tiếp tục lấy 1 trừ tiếp 1 được còn 0 và ta điền 1. </p>
+                            <p>Ta được dẫy số nhị phân của octet đầu sau khi tính là 11001011</p>
+                            <p>làm tương tự vs các octet và subnet mask còn lại.</p>
+                            <p>Ta có dãy số nhị phân của địa chỉ ip : 11001011.10100010.00000100.00000000 </p>
+                            <p>Ta có dãy số nhị phân của subnetmask /24 : 11111111.11111111.11111111.00000000 </p>
+                            <p>Ở đây ta cần 5 subnet nên ta dùng phép tính 2^n > số subnet</p>
+                            <p>nên 2^3 = 8 > 5 còn subnet vậy ta sẽ lấy 3 bit làm network</p>
+                            <p>
+                                địa chỉ network khi lấy 3 bit làm network ta dc các lớp network sau <br>
+                                11001011.10100010.00000100.000|00000 203.162.4.0 /27<br>
+                                11001011.10100010.00000100.001|00000 203.162.4.32 /27 <br>
+                                11001011.10100010.00000100.010|00000 203.162.4.64 /27 <br>
+                                11001011.10100010.00000100.100|00000 203.162.4.128 /27 <br>
+                                11001011.10100010.00000100.101|00000 203.162.4.160 /27 <br>
+                                11001011.10100010.00000100.011|00000 203.162.4.96 /27 <br>
+                                11001011.10100010.00000100.110|00000 203.162.4.192 /27 <br>
+                                11001011.10100010.00000100.111|00000 203.162.4.224 /27 
+                            <br> 
+                            Vậy là có thể lấy ra 5 subnet và số subnet dư thừa ít nhất có thể.
+                            </p>
+                        </div>
+                        <div class="sd">
+                            <h3 class="">Chia mỗi Subnet cần 60 host</h3>
+                            <p>Các bước chia ip thành nhĩ phân tương tự như trên</p>
+                            <p>Vì cần host cho mỗi subnet nên ta dùng phép tính 2^n >= số host</p>
+                            <p>nên 2^6 = 64  > 60 vậy ta sẽ lấy 6 bit làm host</p>
+                            <p>
+                                địa chỉ network khi lấy 3 bit làm network ta dc các lớp network sau <br>
+                                11001011.10100010.00000100.00|000000 203.162.4.0 /26<br>
+                                11001011.10100010.00000100.01|000000 203.162.4.32 /26 <br>
+                                11001011.10100010.00000100.11|000000 203.162.4.192 /26 <br>
+                                11001011.10100010.00000100.10|000000 203.162.4.128 /26 <br>
+                                <br>
+                                Vậy là ta có 4 network mỗi network chứa 160 -2 địa chỉ là broadcast và địa chỉ đầu tiên còn 158 host mỗi subnet.
+                            </p>
+                        </div>
+                        <div class="sd">
+                            <h3 class="text-center">IPv6</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="timeline-entry">
+                <div class="timeline-entry-inner">
+                    <div class="timeline-time">
                         <span>Finish</span>
                         <span>All Time</span>
                     </div>

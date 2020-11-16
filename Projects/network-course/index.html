@@ -74,8 +74,80 @@
                             </p>
                         </div>
                         <div class="sd">
-                            <h3 class="text-center">IPv6</h3>
-                            
+                            <a href="http://securityzone.vn/t/bai-24-tim-hieu-ve-ipv6.126/"><h3 class="text-center">IPv6</h3></a>
+                        </div>
+                        <div class="sd">
+                            <h3 class="text-center">Switch / Modem</h3>
+                            <p>Mỗi Switch đều có một bảng Mac Address Table hay còn gọi là bảng CAM (Content Addressable Memory) dùng để chứa các địa chỉ MAC của Host trong hệ thống.<br>
+                            Ban đầu bảng Mac Address này sẽ trống, Switch sẽ tự học MAC của các Host dần dần và ghi vào trong bảng MAC Address Table. Sau khi bảng MAC có đầy đủ thông tin việc truyền tải dữ liệu giữa các Host sẽ trở nên chính xác, duy nhất một lần và nhanh chóng.<br>
+                            Nhờ khả năng tự học này mà Switch có thể giảm đi hay phân tán miền đụng độ ra, ngoài ra Switch cũng cho phép thực hiện nhiều phiên gửi nhận giữa liệu giữa các máy khác nhau trong mạng mà không phải chờ đợi xếp hàng như hub.</p>
+                            Để kiểm tra MAC Address Table thì trên Switch ta dùng lệnh sau
+                            <div class="ter rounded">
+                                Switch#show mac address-table dynamic
+                            </div>
+                            <h5 class="text-center">Cách thức hoạt động của LAN SWITCH</h5>
+                            <p data-adtags-visited="true">
+                                <img  src="https://tailamblog.files.wordpress.com/2017/08/120.png?w=616" alt="1" sizes="(max-width: 592px) 100vw, 592px">
+                            </p>
+                            <p style="text-align:justify;" data-adtags-visited="true">Đầu tiên máy A gửi một Ethernet Frame (Source MAC là MAC Address của máy A và Destination MAC là MAC Address của máy C) sang máy C thông qua Switch. Switch sẽ tiến hành xây dựng nên nội dung cho bảng MAC Address Table, vì đặc thù Switch chỉ học Source MAC Address nên lúc này Switch sẽ học địa chỉ MAC của máy A và ghi vào bảng, vì Switch không biết MAC của máy C (MAC của C không có trong bảng MAC Address) nên sẽ Flooding ra tất cả các Port trừ Port mà Switch vừa mới nhận Frame (E0).</p>
+                            <p style="text-align:justify;" data-adtags-visited="true">Khi mà máy C nhìn thấy gói tin Flooding chứa Destination MAC của mình nó sẽ gửi về gói phản hồi cho máy A và do đó Switch cũng sẽ học được MAC của máy C trong cùng một lần gửi – phản hồi như vậy, các máy còn lại thì tất nhiên sẽ từ chối gói Flood và sau lần Flood đầu tiên ấy máy A và C đã biết chính xác đường đi tới nhau, máy C sẽ không còn nhìn thấy bất kì Frame (Flood) nào giữa hai máy ấy.</p>
+                            <p data-adtags-visited="true">
+                                <img src="https://tailamblog.files.wordpress.com/2017/08/217.png?w=616" alt="1" sizes="(max-width: 592px) 100vw, 592px">
+                            </p>
+                            <p style="text-align:justify;" data-adtags-visited="true">
+                            Host D gửi Frame tới B thông qua Switch, Switch học được MAC của D và tương tự do Switch chưa biết MAC B nên cũng Floor ra tất cả các Port trừ Port E3. Khi máy B gửi Response về Switch cũng sẽ học được MAC B.</p>
+                            <p data-adtags-visited="true">
+                                <img src=https://tailamblog.files.wordpress.com/2017/08/311.png?w=616" alt="1" sizes="(max-width: 592px) 100vw, 592px">
+                            </p>
+                            <p style="text-align:justify;" data-adtags-visited="true">Tương tự các máy gửi Frame tới nhau cho tới khi Switch học đầy đủ MAC cả các Host trong hệ thống thì lúc này khi mà một máy gửi thông tin tới một máy khác Switch sẽ dò MAC đích trong bảng MAC Address và gửi ra chính xác máy cần nhận thông qua Port và MAC đã học được.</p>
+                            <h5 class="text-center">Router Modem</h5>
+                            <img src="/Projects/network-course/assets/modem.png" alt="" srcset="">
+                        </div>
+                        <div class="sd">
+                            <h3 class="text-center">Application Protocol</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Ứng Dụng</th>
+                                            <th scope="col">Giao thức</th>
+                                            <!-- <th scope="col">Handle</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Gmail, outlook, Yahoo</td>
+                                            <td>SMTP</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Bittorent, uTorrent</td>
+                                            <td>Dat</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Website</td>
+                                            <td>HTTP</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>FireSSH,SmarTTY,Putty</td>
+                                            <td>TELNET</td>
+                                        </tr>   
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Spiceworks, WinAgents, SolarWinds Engineer’s Toolset</td>
+                                            <td>TFTP</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="https://news.cloud365.vn/su-dung-wireshark-de-phan-tich-goi-tin-trong-he-thong-mang/"><h5 class="text-center">Sử dụng Wireshark để phân tích gói tin trong hệ thống mạng</h5></a>
                         </div>
                     </div>
                 </div>
